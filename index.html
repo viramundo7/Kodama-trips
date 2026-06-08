@@ -265,6 +265,88 @@ footer{
 }
 
 }
+    @media (max-width: 900px) {
+
+    /* Hero scaling */
+    .hero h1 {
+        font-size: 3.2rem;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* Navigation becomes more compact */
+    .nav-links {
+        gap: 12px;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Section spacing */
+    section {
+        padding: 70px 0;
+    }
+
+    /* Trip cards spacing */
+    .trips-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Hero even smaller for phones */
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero {
+        padding: 0 15px;
+    }
+
+    /* Better readability */
+    body {
+        font-size: 15px;
+    }
+
+    /* Section spacing tighter */
+    section {
+        padding: 55px 0;
+    }
+
+    /* Contact box padding */
+    .contact-box {
+        padding: 25px;
+    }
+
+    /* Nav links wrap nicely */
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-size: 0.9rem;
+    }
+}
 </style>
 </head>
 
