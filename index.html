@@ -345,6 +345,48 @@ footer{
 #how-it-works{
     background:rgba(216,195,165,0.08);
 }
+    :root{
+    --radius:12px;
+}
+
+/* GLOBAL TYPOGRAPHY RHYTHM */
+p{
+    color:rgba(46,46,46,0.9);
+}
+
+/* SECTION VARIANTS */
+.section-center{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto;
+}
+
+.section-left{
+    max-width:680px;
+    margin:0 auto;
+    text-align:left;
+    line-height:1.8;
+}
+
+/* SOFT DIVIDER SPACING */
+.section-spacer{
+    margin-bottom:60px;
+}
+
+/* HERO TEXT TIGHTER */
+.hero p{
+    opacity:0.95;
+}
+
+/* CARD FEEL IMPROVEMENT */
+.trip-card{
+    border-radius:var(--radius);
+}
+
+/* MAKES TEXT LESS “BLOCKY” */
+.about-content p{
+    margin-bottom:18px;
+}
    
 </style>
    
@@ -371,11 +413,10 @@ footer{
     <div class="container hero-content">
         <h1>Na güará</h1>
 
-        <p>
-            Outdoor climbing weekends for independent climbers.<br>
-            We handle logistics, accommodation suggestions, travel guidance, and crag planning — so you can focus on climbing.
-        </p>
-
+        <p class="section-center">
+    Outdoor climbing weekends for independent climbers.<br>
+    We handle logistics, accommodation, travel guidance, and crag planning — so you can focus on climbing.
+</p>
         <a href="#apply" class="btn">Apply to Join</a>
     </div>
 </section>
@@ -390,31 +431,38 @@ footer{
 
 <!-- ABOUT -->
 <section id="about">
-    <div class="container">
+  <div class="container">
 
-        <div class="section-title">
-            <h2>About Na güará</h2>
-            <p>Less planning. More climbing.</p>
-        </div>
-
-        <div class="about-content">
-
-            <p>Climbing trips have become complicated.</p>
-
-            <p>
-                Too much planning, hard to find a partner, too many messages, too much time spent organizing before you even get on the rock.
-            </p>
-
-            <p>
-                Na güará was created to make getting outside simpler.
-            </p>
-
-            <p>
-                We organize climbing weekends for experienced climbers by bringing people together and taking care of the logistics around the trip.
-            </p>
-
-        </div>
+    <div class="section-title">
+      <h2>About Na güará</h2>
+      <p>Less planning. More climbing.</p>
     </div>
+
+    <div class="section-center section-spacer">
+      <p style="font-size:1.2rem; line-height:1.7;">
+        Climbing trips have become complicated — too much planning, too many messages, too much friction before you even get outside.
+      </p>
+    </div>
+
+    <div class="section-left">
+
+      <p><strong>Na güará was created to remove that friction.</strong></p>
+
+      <p>
+        We organize climbing weekends for experienced climbers by handling the logistics around the trip.
+      </p>
+
+      <p>
+        You join a structured group, follow a clear plan, and focus entirely on climbing.
+      </p>
+
+      <p>
+        No guiding. No coaching. Just better-organized climbing weekends with the right people.
+      </p>
+
+    </div>
+
+  </div>
 </section>
 
 <!-- TRIPS -->
@@ -474,7 +522,7 @@ footer{
 <section id="before-you-join">
     <div class="container">
 
-        <div class="section-title">
+        <div class="section-title section-spacer">
             <h2>Before You Join</h2>
             <p>Everything you need to know.</p>
         </div>
@@ -525,7 +573,7 @@ footer{
             <h2>Trip Policy</h2>
         </div>
 
-        <div class="about-content">
+        <div class="section-left">
 
             <p><strong>Weather</strong></p>
             <p>
