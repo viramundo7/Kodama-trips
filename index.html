@@ -9,8 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
-   :root{
+<style>:root{
     --bg:#faf8f4;
     --sand:#d8c3a5;
     --sand-dark:#c5ae8b;
@@ -21,6 +20,7 @@
     --max-width:1200px;
 }
 
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -32,29 +32,45 @@ html{
 }
 
 body{
-    font-family:'Inter',sans-serif;
+    font-family:'Inter', sans-serif;
     background:var(--bg);
     color:var(--text);
     line-height:1.7;
 }
 
+/* LAYOUT */
 .container{
     width:90%;
     max-width:var(--max-width);
     margin:auto;
 }
 
-h1,h2,h3{
-    font-family:'Playfair Display',serif;
-    font-weight:500;
-}
-
 section{
     padding:90px 0;
 }
 
-/* NAV */
+/* TYPOGRAPHY */
+h1,h2,h3{
+    font-family:'Playfair Display', serif;
+    font-weight:500;
+}
 
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.6rem;
+    letter-spacing:-0.5px;
+}
+
+.section-title p{
+    color:rgba(0,0,0,0.55);
+    margin-top:6px;
+}
+
+/* NAV */
 nav{
     position:fixed;
     top:0;
@@ -73,7 +89,7 @@ nav{
 }
 
 .logo{
-    font-family:'Playfair Display',serif;
+    font-family:'Playfair Display', serif;
     font-size:1.8rem;
     letter-spacing:2px;
 }
@@ -94,15 +110,14 @@ nav{
 }
 
 /* HERO */
-
 .hero{
     min-height:100vh;
     display:flex;
     align-items:center;
     text-align:center;
     background:
-    linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
-    url('https://images.unsplash.com/photo-1516592673884-4a382d1124c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGNsaW1iaW5nfGVufDB8fDB8fHww');
+        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
+        url('https://images.unsplash.com/photo-1516592673884-4a382d1124c2?w=500&auto=format&fit=crop&q=60');
     background-size:cover;
     background-position:center;
     color:white;
@@ -122,7 +137,8 @@ nav{
     font-size:1.2rem;
     margin-bottom:35px;
 }
-    
+
+/* BUTTON */
 .btn{
     display:inline-block;
     padding:14px 30px;
@@ -139,44 +155,25 @@ nav{
     color:white;
 }
 
-/* ABOUT */
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:2.5rem;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:var(--muted);
-}
-
+/* ABOUT / TEXT BLOCK */
 .about-content{
     max-width:680px;
     margin:auto;
     text-align:left;
     line-height:1.8;
     font-size:1.05rem;
-    color:var(--text);
-}
-   
-.about-content p{
-    margin-bottom:14px;
-    color:var(--text);
-    opacity:0.92;
 }
 
-   .about-content strong{
+.about-content p{
+    margin-bottom:14px;
+    color:rgba(46,46,46,0.9);
+}
+
+.about-content strong{
     font-weight:600;
-    color:var(--text);
 }
 
 /* TRIPS */
-
 .trips-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -216,6 +213,7 @@ nav{
     margin-bottom:15px;
 }
 
+/* BADGE */
 .badge{
     display:inline-block;
     background:var(--forest);
@@ -225,8 +223,7 @@ nav{
     font-size:.85rem;
 }
 
-/* CONTACT */
-
+/* FORM */
 .contact-box{
     max-width:700px;
     margin:auto;
@@ -264,152 +261,93 @@ button{
     font-weight:600;
 }
 
-/* FOOTER */
+button:hover{
+    background:var(--forest);
+    color:white;
+}
 
+/* FOOTER */
 footer{
     text-align:center;
     padding:40px 0;
     color:var(--muted);
 }
 
-@media(max-width:768px){
-
-.hero h1{
-    font-size:3rem;
+/* WARNING BOX */
+.trip-warning{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    justify-content:center;
+    background:#fff8e1;
+    border-left:5px solid #f59e0b;
+    padding:16px;
+    border-radius:8px;
+    margin:20px 0;
 }
 
-.nav-links{
-    gap:15px;
-    font-size:.9rem;
-}
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero h1{
+        font-size:3.2rem;
+        line-height:1.1;
+    }
 
-}
+    .hero p{
+        font-size:1rem;
+        padding:0 10px;
+    }
 
- section{
-    padding:90px 0;
+    .nav-inner{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .nav-links{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+        font-size:.9rem;
+    }
+
+    .trips-grid{
+        gap:20px;
+    }
 }
 
 @media(max-width:768px){
     section{
         padding:75px 0;
     }
-}
 
-   .section-title h2{
-    font-size:2.6rem;
-    letter-spacing:-0.5px;
-}
-
-.section-title p{
-    color:rgba(0,0,0,0.55);
-    margin-top:6px;
-}
-   
-    @media (max-width: 900px) {
-
-    /* Hero scaling */
-    .hero h1 {
-        font-size: 3.2rem;
-        line-height: 1.1;
+    .hero h1{
+        font-size:3rem;
     }
 
-    .hero p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    /* Navigation becomes more compact */
-    .nav-links {
-        gap: 12px;
-        font-size: 0.9rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-inner {
-        flex-direction: column;
-        gap: 10px;
-    }
-   
-
-    /* Trip cards spacing */
-    .trips-grid {
-        gap: 20px;
+    .contact-box{
+        padding:25px;
     }
 }
 
-@media (max-width: 600px) {
-
-    /* Hero even smaller for phones */
-    .hero h1 {
-        font-size: 2.3rem;
+@media(max-width:400px){
+    .hero h1{
+        font-size:1.9rem;
     }
 
-    .hero {
-        padding: 0 15px;
-    }
-
-    /* Better readability */
-    body {
-        font-size: 15px;
-    }
-
-    /* Section spacing tighter */
-  
-
-    /* Contact box padding */
-    .contact-box {
-        padding: 25px;
-    }
-
-    /* Nav links wrap nicely */
-    .nav-links {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+    .btn{
+        padding:12px 22px;
+        font-size:.9rem;
     }
 }
-    .trip-warning {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    text-align:center;
-    justify-content: center;
-    background: #fff8e1;
-    border-left: 5px solid #f59e0b;
-    color: #333;
-    padding: 16px;
-    border-radius: 8px;
-    margin: 20px 0;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
 
-.warning-icon {
-    font-size: 1.4rem;
-    flex-shrink: 0;
-}
-    
-}
-
-   
+/* SOFT SAND BACKGROUND SECTIONS */
 #what-this-is,
-#how-it-works {
-    background: rgba(216, 195, 165, 0.08); /* soft sand tint */
+#how-it-works{
+    background:rgba(216,195,165,0.08);
 }
-
-@media (max-width: 400px) {
-
-    .hero h1 {
-        font-size: 1.9rem;
-    }
-
-    .btn {
-        padding: 12px 22px;
-        font-size: 0.9rem;
-    }
-}
+   
 </style>
+   
 </head>
 
 <body>
