@@ -223,7 +223,51 @@ footer{
   margin:0;
   line-height:1.5;
 }
+          
+/* HERO TEXT READABILITY FIX */
+.hero h1,
+.hero p{
+  color: #ffffff;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.45);
+}
 
+/* FORM MODERN FIX */
+input, textarea, select{
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.12);
+  font-size: 1rem;
+  color: var(--text);
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input:focus,
+textarea:focus{
+  border-color: var(--sand-dark);
+  box-shadow: 0 0 0 3px rgba(216,195,165,0.25);
+}
+
+/* BUTTON FIX (clean modern feel) */
+button{
+  background: var(--sand);
+  color: var(--text);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* TRIP TEXT READABILITY */
+.trip-content p,
+.trip-content h3{
+  color: var(--text);
+}
+
+/* SAFETY NET (prevents dark text surprises) */
+body{
+  color: var(--text);
+}
+
+        
 </style>
    
 </head>
