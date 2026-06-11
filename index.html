@@ -24,6 +24,49 @@
   padding:0;
   box-sizing:border-box;
 }
+                
+/* =========================
+   ABOUT SECTION FINAL FIX
+   (mobile + layout balance)
+========================= */
+
+/* keeps spacing clean */
+.founder-grid{
+  gap:50px;
+}
+
+/* image behavior fix */
+.founder-image img{
+  width:100%;
+  border-radius:12px;
+  object-fit:cover;
+  display:block;
+}
+
+/* MOBILE OPTIMIZATION */
+@media(max-width:800px){
+
+  .founder-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+    text-align:left;
+  }
+
+  .founder-image img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:12px;
+  }
+
+  .founder-content h2{
+    font-size:1.8rem;
+  }
+
+  .founder-content p{
+    font-size:0.95rem;
+  }
+}
 
 body{
   font-family:Inter;
