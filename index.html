@@ -294,12 +294,67 @@ button{
 .trip-map-btn:hover{
     background:#f3efe8;
 }
+        /* ABOUT / FOUNDER SECTION */
+
+.founder-grid{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:60px;
+    align-items:center;
+    max-width:1000px;
+    margin:auto;
+}
+
+.founder-image img{
+    width:100%;
+    max-width:320px;
+    height:420px;
+    object-fit:cover;
+    border-radius:16px;
+    display:block;
+    margin:auto;
+}
+
+.founder-content{
+    max-width:650px;
+}
+
+.founder-content h2{
+    margin-bottom:20px;
+    font-size:2.2rem;
+}
+
+.founder-content p{
+    margin-bottom:16px;
+    line-height:1.8;
+}
+
+/* mobile */
+
+@media(max-width:900px){
+
+    .founder-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:30px;
+    }
+
+    .founder-image img{
+        max-width:280px;
+        height:360px;
+    }
+
+    .founder-content{
+        max-width:100%;
+    }
+}
 
 /* SAFETY NET (prevents dark text surprises) */
 body{
   color: var(--text);
 }
 
+        
         
 </style>
    
